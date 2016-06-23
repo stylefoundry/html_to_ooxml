@@ -9,7 +9,7 @@ Heavily based on the htmltoword gem https://github.com/karnov/htmltoword
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'html_to_ooxml'
+gem 'htmltoooxml'
 ```
 And then execute:
 
