@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Justin Boynton"]
   spec.email         = ["justin.boynton@stylefoundry.co.uk"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Parse HTML and convert to open office xml for powerpoint}
+  spec.description   = %q{Parse HTML and convert to open office xml for powerpoint}
+  spec.homepage      = "https://github/stylefoundry"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
