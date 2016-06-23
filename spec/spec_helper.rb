@@ -1,14 +1,7 @@
 require 'nokogiri'
-require 'Htmltoooxml'
+require 'htmltoooxml'
 
 include Htmltoooxml::XSLTHelper
-
-def html_to_ooxml(html)
- source = Nokogiri::HTML(html.gsub(/>\s+</, "><"))
- xslt = Nokogiri::XSLT(File.read('spec/html_to_ooxml.xslt'))
- result = xslt.apply_to(source)
- result
-end
 
 def compare_transformed_files(test, test_file_name, extras: false)
   source = File.read(fixture_path(test, test_file_name, :html))
