@@ -2,6 +2,8 @@
 
 Convert basic html to ooxml standard for inclusion in PPTX files
 
+Heavily based on the htmltoword gem https://github.com/karnov/htmltoword
+
 ## Installation
 
 Add this line to your application's Gemfile:
