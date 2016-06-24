@@ -104,6 +104,12 @@
 
   <xsl:template match="p[not(ancestor::li)]">
     <a:p>
+      <a:pPr marL="0" indent="0">
+        <a:spcAft>
+          <a:spcPts val="600"/>
+        </a:spcAft>
+        <a:buNone/>
+      </a:pPr>
       <xsl:call-template name="text-alignment" />
       <xsl:apply-templates />
     </a:p>
@@ -307,6 +313,7 @@
             <a:vertAlign a:val="superscript"/>
           </a:rPr>
         </xsl:if>
+        <a:rPr lang="en-US" sz="1600" b="0" noProof="0" dirty="0" smtClean="0" />
         <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
       </a:r>
     </xsl:if>
