@@ -106,12 +106,6 @@
 
   <xsl:template match="p[not(ancestor::li)]">
     <a:p>
-      <a:pPr marL="0" indent="0">
-        <a:spcAft>
-          <a:spcPts val="600"/>
-        </a:spcAft>
-        <a:buNone/>
-      </a:pPr>
       <xsl:call-template name="text-alignment" />
       <xsl:apply-templates />
     </a:p>
