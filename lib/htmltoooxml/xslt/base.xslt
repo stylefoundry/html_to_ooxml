@@ -45,6 +45,7 @@
     <a:p>
       <xsl:call-template name="text-alignment" />
       <a:r>
+        <a:rPr lang="en-GB" dirty="0"/>
         <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
@@ -97,6 +98,7 @@
         <a:pStyle a:val="Heading{substring(name(.),$length)}"/>
       </a:pPr>
       <a:r>
+        <a:rPr lang="en-GB" dirty="0"/>
         <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
@@ -230,6 +232,7 @@
       </xsl:comment>
     <a:p>
       <a:r>
+        <a:rPr lang="en-GB" dirty="0"/>
         <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
@@ -313,7 +316,7 @@
             <a:vertAlign a:val="superscript"/>
           </a:rPr>
         </xsl:if>
-        <a:rPr lang="en-US" sz="1600" b="0" noProof="0" dirty="0" smtClean="0" />
+        <a:rPr lang="en-GB" dirty="0"/>
         <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
       </a:r>
     </xsl:if>
