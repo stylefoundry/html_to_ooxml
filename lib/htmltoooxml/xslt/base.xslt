@@ -94,9 +94,6 @@
   <xsl:template match="body/h1|body/h2|body/h3|body/h4|body/h5|body/h6|h1|h2|h3|h4|h5|h6">
     <xsl:variable name="length" select="string-length(name(.))"/>
     <a:p>
-      <a:pPr>
-        <a:pStyle a:val="Heading{substring(name(.),$length)}"/>
-      </a:pPr>
       <a:r>
         <a:rPr lang="en-GB" b="1" dirty="0"/>
         <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
