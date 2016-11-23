@@ -46,7 +46,7 @@
       <xsl:call-template name="text-alignment" />
       <a:r>
         <a:rPr lang="en-GB" dirty="0"/>
-        <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
+        <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
   </xsl:template>
@@ -96,7 +96,7 @@
     <a:p>
       <a:r>
         <a:rPr lang="en-GB" b="1" dirty="0"/>
-        <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
+        <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
   </xsl:template>
@@ -224,7 +224,7 @@
     <a:p>
       <a:r>
         <a:rPr lang="en-GB" dirty="0"/>
-        <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
+        <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
   </xsl:template>
