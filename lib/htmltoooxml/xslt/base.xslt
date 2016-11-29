@@ -248,7 +248,7 @@
             <a:rPr>
               <a:highlight a:val="{$color}"/>
             </a:rPr>
-            <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
+            <a:t><xsl:value-of select="."/></a:t>
           </a:r>
         </a:p>
       </xsl:when>
@@ -257,7 +257,7 @@
           <a:rPr>
             <a:highlight a:val="{$color}"/>
           </a:rPr>
-          <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
+          <a:t><xsl:value-of select="."/></a:t>
         </a:r>
       </xsl:otherwise>
     </xsl:choose>
@@ -278,37 +278,19 @@
     <xsl:if test="string-length(.) > 0">
       <a:r>
         <xsl:if test="ancestor::i">
-          <a:rPr>
-            <a:i />
-          </a:rPr>
         </xsl:if>
         <xsl:if test="ancestor::b">
-          <a:rPr>
-            <a:b />
-          </a:rPr>
         </xsl:if>
         <xsl:if test="ancestor::u">
-          <a:rPr>
-            <a:u a:val="single"/>
-          </a:rPr>
         </xsl:if>
         <xsl:if test="ancestor::s">
-          <a:rPr>
-            <a:strike a:val="true"/>
-          </a:rPr>
         </xsl:if>
         <xsl:if test="ancestor::sub">
-          <a:rPr>
-            <a:vertAlign a:val="subscript"/>
-          </a:rPr>
         </xsl:if>
         <xsl:if test="ancestor::sup">
-          <a:rPr>
-            <a:vertAlign a:val="superscript"/>
-          </a:rPr>
         </xsl:if>
         <a:rPr lang="en-GB" dirty="0"/>
-        <a:t xml:space="preserve"><xsl:value-of select="."/></a:t>
+        <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </xsl:if>
   </xsl:template>
