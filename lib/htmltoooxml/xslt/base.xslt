@@ -45,7 +45,7 @@
     <a:p>
       <xsl:call-template name="text-alignment" />
       <a:r>
-        <a:rPr lang="en-GB" dirty="0"/>
+        <a:rPr/>
         <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
@@ -95,7 +95,7 @@
     <xsl:variable name="length" select="string-length(name(.))"/>
     <a:p>
       <a:r>
-        <a:rPr lang="en-GB" b="1" dirty="0"/>
+        <a:rPr b="1" dirty="0"/>
         <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
@@ -223,7 +223,7 @@
       </xsl:comment>
     <a:p>
       <a:r>
-        <a:rPr lang="en-GB" dirty="0"/>
+        <a:rPr/>
         <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </a:p>
@@ -278,22 +278,22 @@
     <xsl:if test="string-length(.) > 0">
       <a:r>
         <xsl:if test="ancestor::i">
-         <a:rPr lang="en-GB" dirty="0"/ i="1">
+         <a:rPr  dirty="0" i="1"/>
         </xsl:if>
         <xsl:if test="ancestor::b">
-          <a:rPr lang="en-GB" dirty="0" b="1"/>
+          <a:rPr dirty="0" b="1"/>
         </xsl:if>
         <xsl:if test="ancestor::u">
-          <a:rPr lang="en-GB" dirty="0"/>
+          <a:rPr dirty="0"/>
         </xsl:if>
         <xsl:if test="ancestor::s">
-          <a:rPr lang="en-GB" dirty="0"/>
+          <a:rPr dirty="0"/>
         </xsl:if>
         <xsl:if test="ancestor::sub">
-          <a:rPr lang="en-GB" dirty="0"/>
+          <a:rPr dirty="0"/>
         </xsl:if>
         <xsl:if test="ancestor::sup">
-          <a:rPr lang="en-GB" dirty="0"/>
+          <a:rPr dirty="0"/>
         </xsl:if>
         <a:t><xsl:value-of select="."/></a:t>
       </a:r>
