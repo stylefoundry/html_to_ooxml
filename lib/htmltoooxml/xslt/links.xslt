@@ -24,7 +24,7 @@
       <a:r>
         <a:rPr>
           <a:hlinkClick>
-            <xsl:attribute name="r:id">rId<xsl:value-of select="count(preceding::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]) + 8" /></xsl:attribute>
+            <xsl:attribute name="r:id">rId<xsl:value-of select="count(preceding::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]) + 100" /></xsl:attribute>
           </a:hlinkClick>
         </a:rPr>
         <a:t>
