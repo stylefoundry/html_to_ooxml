@@ -278,23 +278,27 @@
     <xsl:if test="string-length(.) > 0">
       <a:r>
         <xsl:if test="ancestor::i">
+         <a:rPr lang="en-GB" dirty="0"/ i="1">
         </xsl:if>
         <xsl:if test="ancestor::b">
+          <a:rPr lang="en-GB" dirty="0" b="1"/>
         </xsl:if>
         <xsl:if test="ancestor::u">
+          <a:rPr lang="en-GB" dirty="0"/>
         </xsl:if>
         <xsl:if test="ancestor::s">
+          <a:rPr lang="en-GB" dirty="0"/>
         </xsl:if>
         <xsl:if test="ancestor::sub">
+          <a:rPr lang="en-GB" dirty="0"/>
         </xsl:if>
         <xsl:if test="ancestor::sup">
+          <a:rPr lang="en-GB" dirty="0"/>
         </xsl:if>
-        <a:rPr lang="en-GB" dirty="0"/>
         <a:t><xsl:value-of select="."/></a:t>
       </a:r>
     </xsl:if>
   </xsl:template>
-
   <xsl:template match="*">
     <xsl:apply-templates/>
   </xsl:template>

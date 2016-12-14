@@ -34,7 +34,6 @@
   <xsl:template match="source"/>
   <xsl:template match="style"/>
   <xsl:template match="video"/>
-
   <!-- Elements currently being handled as normal text. Remove tags only -->
   <xsl:template match="abbr"><xsl:apply-templates/></xsl:template>
   <xsl:template match="acronym"><xsl:apply-templates/></xsl:template>
