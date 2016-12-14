@@ -18,18 +18,24 @@
                 extension-element-prefixes="func">
 
   <xsl:template match="a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]" name="link">
+    <!--
     <a:hyperlink>
       <xsl:attribute name="r:id">rId<xsl:value-of select="count(preceding::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]) + 8" /></xsl:attribute>
+      //-->
       <a:r>
+        <!--
         <a:rPr>
           <a:rStyle a:val="Hyperlink"/>
           <a:color a:val="000080"/>
           <a:u a:val="single"/>
         </a:rPr>
-        <a:t xml:space="preserve">
+        //-->
+        <a:t>
           <xsl:value-of select="."/>
         </a:t>
       </a:r>
+    <!--
     </a:hyperlink>
+    //-->
   </xsl:template>
 </xsl:stylesheet>
