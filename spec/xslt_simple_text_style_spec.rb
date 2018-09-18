@@ -36,4 +36,9 @@ describe "XSLT" do
     html = '<html><head></head><body><p><a href="http://www.somewhere.com">Hello</a></p></body></html>'
     compare_resulting_ooxml_with_expected(html, "<a:p> <a:r> <a:rPr> <a:hlinkClick r:id=\"rId100\"/></a:rPr> <a:t>Hello</a:t> </a:r> </a:p>")
   end
+
+  it "transforms a bulleted list" do
+    html = "<html><head></head><body><ul><li>Test 1</li></ul></body></html>"
+    compare_resulting_ooxml_with_expected(html, "<p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr/><a:r><a:t>Test 1</a:t></a:r></a:p></p:txBody>")
+  end
 end

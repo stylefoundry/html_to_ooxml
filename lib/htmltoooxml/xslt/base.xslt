@@ -121,6 +121,15 @@
     <xsl:for-each select="node()">
       <xsl:choose>
         <xsl:when test="self::br">
+          <p:txBody>
+            <a:bodyPr/>
+            <a:lstStyle/>
+            <a:p>
+              <a:pPr/>
+              <a:r><a:t><xsl:value-of select="."/></a:t></a:r>
+            </a:p>
+          </p:txBody>
+          <!--
           <a:p>
             <a:pPr>
               <a:pStyle a:val="ListParagraph"></a:pStyle>
@@ -131,6 +140,7 @@
             </a:pPr>
             <a:r></a:r>
           </a:p>
+         //-->
         </xsl:when>
         <xsl:when test="self::ol|self::ul">
           <xsl:apply-templates>
@@ -141,6 +151,15 @@
           <xsl:variable name="ilvl" select="count(ancestor::ol) + count(ancestor::ul) - 1"></xsl:variable>
           <xsl:choose>
             <xsl:when test="$preceding-siblings + count(preceding-sibling::*) > 0">
+            <p:txBody>
+              <a:bodyPr/>
+              <a:lstStyle/>
+              <a:p>
+                <a:pPr/>
+                <xsl:apply-templates/>
+              </a:p>
+            </p:txBody>
+            <!--
               <a:p>
                 <a:pPr>
                   <a:pStyle a:val="ListParagraph"></a:pStyle>
@@ -152,8 +171,18 @@
                 </a:pPr>
                 <xsl:apply-templates/>
               </a:p>
+            //-->
             </xsl:when>
             <xsl:otherwise>
+              <p:txBody>
+                <a:bodyPr/>
+                <a:lstStyle/>
+                <a:p>
+                  <a:pPr/>
+                  <xsl:apply-templates/>
+                </a:p>
+              </p:txBody>
+              <!--
               <a:p>
                 <a:pPr>
                   <a:pStyle a:val="ListParagraph"></a:pStyle>
@@ -164,6 +193,7 @@
                 </a:pPr>
                 <xsl:apply-templates/>
               </a:p>
+             //-->
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
