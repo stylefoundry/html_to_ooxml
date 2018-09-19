@@ -125,22 +125,12 @@
             <a:bodyPr/>
             <a:lstStyle/>
             <a:p>
-              <a:pPr/>
-              <a:r><a:t><xsl:value-of select="."/></a:t></a:r>
+              <a:r>
+                <a:rPr dirty="0"/>
+                <a:t><xsl:value-of select="."/></a:t>
+              </a:r>
             </a:p>
           </p:txBody>
-          <!--
-          <a:p>
-            <a:pPr>
-              <a:pStyle a:val="ListParagraph"></a:pStyle>
-              <a:numPr>
-                <a:ilvl a:val="0"/>
-                <a:numId a:val="0"/>
-              </a:numPr>
-            </a:pPr>
-            <a:r></a:r>
-          </a:p>
-         //-->
         </xsl:when>
         <xsl:when test="self::ol|self::ul">
           <xsl:apply-templates>
@@ -155,45 +145,24 @@
               <a:bodyPr/>
               <a:lstStyle/>
               <a:p>
-                <a:pPr/>
-                <xsl:apply-templates/>
+                <a:r>
+                  <a:rPr dirty="0"/>
+                  <a:t><xsl:value-of select="."/></a:t>
+                </a:r>
               </a:p>
             </p:txBody>
-            <!--
-              <a:p>
-                <a:pPr>
-                  <a:pStyle a:val="ListParagraph"></a:pStyle>
-                  <a:numPr>
-                    <a:ilvl a:val="0"/>
-                    <a:numId a:val="0"/>
-                  </a:numPr>
-                  <a:ind a:left="{720 * ($ilvl + 1)}"/>
-                </a:pPr>
-                <xsl:apply-templates/>
-              </a:p>
-            //-->
             </xsl:when>
             <xsl:otherwise>
               <p:txBody>
                 <a:bodyPr/>
                 <a:lstStyle/>
                 <a:p>
-                  <a:pPr/>
-                  <xsl:apply-templates/>
+                  <a:r>
+                    <a:rPr dirty="0"/>
+                    <a:t><xsl:value-of select="."/></a:t>
+                  </a:r>
                 </a:p>
               </p:txBody>
-              <!--
-              <a:p>
-                <a:pPr>
-                  <a:pStyle a:val="ListParagraph"></a:pStyle>
-                  <a:numPr>
-                    <a:ilvl a:val="{$ilvl}"/>
-                    <a:numId a:val="{$global_level}"/>
-                  </a:numPr>
-                </a:pPr>
-                <xsl:apply-templates/>
-              </a:p>
-             //-->
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>

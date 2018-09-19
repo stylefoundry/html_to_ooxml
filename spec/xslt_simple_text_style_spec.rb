@@ -39,6 +39,6 @@ describe "XSLT" do
 
   it "transforms a bulleted list" do
     html = "<html><head></head><body><ul><li>Test 1</li></ul></body></html>"
-    compare_resulting_ooxml_with_expected(html, "<p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:pPr/><a:r><a:t>Test 1</a:t></a:r></a:p></p:txBody>")
+    compare_resulting_ooxml_with_expected(html, "<p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:r><a:rPr dirty=\"0\"/><a:t>Test 1</a:t></a:r></a:p></p:txBody>")
   end
 end
