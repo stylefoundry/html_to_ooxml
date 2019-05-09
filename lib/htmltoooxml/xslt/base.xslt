@@ -138,7 +138,7 @@
           <xsl:choose>
             <xsl:when test="$preceding-siblings + count(preceding-sibling::*) > 0">
               <a:lstStyle>
-                <a:lvl2pPr marL=""868680" indent="-283464" algn="ctr" rtl="0" ealnBrk="1" latinLnBrk="0" hangingPunct="1" >
+                <a:lvl2pPr marL="868680" indent="-283464" algn="ctr" rtl="0" ealnBrk="1" latinLnBrk="0" hangingPunct="1">
                   <a:spcBef>
                     <a:spcPct val="20000"/>
                   </a:spcBef>
@@ -162,7 +162,7 @@
             </xsl:when>
             <xsl:otherwise>
               <a:lstStyle>
-                <a:lvl2pPr marL=""868680" indent="-283464" algn="ctr" rtl="0" ealnBrk="1" latinLnBrk="0" hangingPunct="1" >
+                <a:lvl2pPr marL="868680" indent="-283464" algn="ctr" rtl="0" ealnBrk="1" latinLnBrk="0" hangingPunct="1" >
                   <a:spcBef>
                     <a:spcPct val="20000"/>
                   </a:spcBef>
