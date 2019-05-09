@@ -39,6 +39,6 @@ describe "XSLT" do
 
   it "transforms a bulleted list" do
     html = "<html><head></head><body><ul><li>Test 1</li></ul></body></html>"
-    compare_resulting_ooxml_with_expected(html, "<a:lstStyle><a:lvl2pPr marL=\"868680\" indent=\"-283464\" algn=\"ctr\" rtl=\"0\" ealnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\"><a:spcBef><a:spcPct val=\"20000\"/></a:spcBef><a:buClr><a:schemeClr val=\"tx1\"/></a:buClr><a:buSzPct val=\"80000\"/><a:buFont typeface=\"Wingdings2\"/><a:buChar char=\"•\"/><a:defRPr sz=\"2400\" kern=\"1200\"> . . . </a:defRPr></a:lvl2pPr></a:lstStyle><a:p><a:r><a:rPr dirty=\"0\"/><a:t>Test 1</a:t></a:r></a:p>")
+    compare_resulting_ooxml_with_expected(html, "<a:p><a:r><a:pPr><a:buFont typeface=\"Wingdings\"/><a:buChar char=\".\"/></a:pPr><a:t>Test 1</a:t></a:r></a:p>")
   end
 end

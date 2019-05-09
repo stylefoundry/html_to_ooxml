@@ -137,52 +137,26 @@
           <xsl:variable name="ilvl" select="count(ancestor::ol) + count(ancestor::ul) - 1"></xsl:variable>
           <xsl:choose>
             <xsl:when test="$preceding-siblings + count(preceding-sibling::*) > 0">
-              <a:lstStyle>
-                <a:lvl2pPr marL="868680" indent="-283464" algn="ctr" rtl="0" ealnBrk="1" latinLnBrk="0" hangingPunct="1">
-                  <a:spcBef>
-                    <a:spcPct val="20000"/>
-                  </a:spcBef>
-                  <a:buClr>
-                    <a:schemeClr val="tx1"/>
-                  </a:buClr>
-                  <a:buSzPct val="80000"/>
-                  <a:buFont typeface="Wingdings2"/>
-                  <a:buChar char="•"/>
-                  <a:defRPr sz="2400" kern="1200">
-                    . . .
-                  </a:defRPr>
-                </a:lvl2pPr>
-              </a:lstStyle>
               <a:p>
                 <a:r>
-                  <a:rPr dirty="0"/>
+                  <a:pPr>
+                    <a:buFont typeface="Wingdings"/>
+                    <a:buChar char="."/>
+                  </a:pPr>
                   <a:t><xsl:value-of select="."/></a:t>
                 </a:r>
               </a:p>
             </xsl:when>
             <xsl:otherwise>
-              <a:lstStyle>
-                <a:lvl2pPr marL="868680" indent="-283464" algn="ctr" rtl="0" ealnBrk="1" latinLnBrk="0" hangingPunct="1" >
-                  <a:spcBef>
-                    <a:spcPct val="20000"/>
-                  </a:spcBef>
-                  <a:buClr>
-                    <a:schemeClr val="tx1"/>
-                  </a:buClr>
-                  <a:buSzPct val="80000"/>
-                  <a:buFont typeface="Wingdings2"/>
-                  <a:buChar char="•"/>
-                  <a:defRPr sz="2400" kern="1200">
-                    . . .
-                  </a:defRPr>
-                </a:lvl2pPr>
-              </a:lstStyle>
-                <a:p>
-                  <a:r>
-                    <a:rPr dirty="0"/>
-                    <a:t><xsl:value-of select="."/></a:t>
-                  </a:r>
-                </a:p>
+              <a:p>
+                <a:r>
+                  <a:pPr>
+                    <a:buFont typeface="Wingdings"/>
+                    <a:buChar char="."/>
+                  </a:pPr>
+                  <a:t><xsl:value-of select="."/></a:t>
+                </a:r>
+              </a:p>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
