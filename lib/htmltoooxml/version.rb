@@ -1,3 +1,2 @@
 module Htmltoooxml
-  VERSION = "0.3.6"
-end
+  VERSION = "0.3.7"
