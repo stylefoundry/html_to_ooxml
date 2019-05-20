@@ -139,7 +139,7 @@
             <xsl:when test="$preceding-siblings + count(preceding-sibling::*) > 0">
               <a:p>
                 <a:r>
-                  <a:pPr>
+                  <a:pPr lvl="2">
                     <a:buFont typeface="Wingdings"/>
                     <a:buChar char="."/>
                   </a:pPr>
@@ -150,7 +150,7 @@
             <xsl:otherwise>
               <a:p>
                 <a:r>
-                  <a:pPr>
+                  <a:pPr lvl="1">
                     <a:buFont typeface="Wingdings"/>
                     <a:buChar char="."/>
                   </a:pPr>
