@@ -139,7 +139,7 @@
             <xsl:when test="$preceding-siblings + count(preceding-sibling::*) > 0">
               <a:p>
                 <a:r>
-                  <a:pPr lvl="$ilvl"><a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                  <a:pPr marL="457200" indent="-457200"><a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
                   <a:buChar char="•"/>
                   </a:pPr>
                   <a:t><xsl:value-of select="."/></a:t>
@@ -149,7 +149,7 @@
             <xsl:otherwise>
               <a:p>
                 <a:r>
-                  <a:pPr lvl="1"><a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                  <a:pPr marL="457200" indent="-457200"><a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
                   <a:buChar char="•"/>
                   </a:pPr>
                   <a:t><xsl:value-of select="."/></a:t>
