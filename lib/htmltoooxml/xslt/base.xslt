@@ -149,10 +149,11 @@
             </xsl:when>
             <xsl:otherwise>
               <a:p>
-                <a:r>
-                  <a:pPr marL="457200" indent="-457200"><a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
+                <a:pPr marL="457200" indent="-457200">
+  								<a:buFont typeface="Arial" panose="020B0604020202020204" pitchFamily="34" charset="0"/>
                   <a:buChar char="•"/>
-                  </a:pPr>
+                </a:pPr>
+                <a:r>
                   <a:rPr dirty="0"/>
                   <a:t><xsl:value-of select="."/></a:t>
                 </a:r>
