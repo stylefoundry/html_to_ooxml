@@ -51,25 +51,19 @@
     </a:p>
   </xsl:template>
 
-
   <xsl:template match="br[not(ancestor::p) and not(ancestor::div) and not(ancestor::td|ancestor::li) or
                           (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
-    <a:p>
-      <a:r></a:r>
-    </a:p>
+    <a:p><a:endParaRPr/></a:p>
   </xsl:template>
 
   <xsl:template match="br[(ancestor::li or ancestor::td) and
                           (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
-    <a:r>
-      <a:br />
-    </a:r>
+    <xsl:apply-templates />
+    <a:p><a:endParaRPr/></a:p>
   </xsl:template>
 
   <xsl:template match="br">
-    <a:r>
-      <a:br />
-    </a:r>
+    <a:p><a:endParaRPr/></a:p>
   </xsl:template>
 
   <xsl:template match="pre">
@@ -259,9 +253,7 @@
 
   <xsl:template match="div[contains(concat(' ', @class, ' '), ' -page-break ')]">
     <a:p>
-      <a:r>
-        <a:br a:type="page" />
-      </a:r>
+      <a:endParaRPr/>
     </a:p>
     <xsl:apply-templates />
   </xsl:template>
