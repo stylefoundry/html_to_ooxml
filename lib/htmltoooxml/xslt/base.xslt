@@ -272,6 +272,9 @@
             <xsl:if test="ancestor::b">
               <xsl:attribute name="b">1</xsl:attribute>
             </xsl:if>
+            <xsl:if test="ancestor::u">
+              <xsl:attribute name="u">sng</xsl:attribute>
+            </xsl:if>
           </xsl:element>
         </xsl:if>
         <a:t><xsl:value-of select="."/></a:t>
