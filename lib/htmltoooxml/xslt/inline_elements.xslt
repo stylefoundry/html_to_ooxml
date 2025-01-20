@@ -1,7 +1,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output encoding="utf-8" omit-xml-declaration="yes" indent="yes" />
 
-  <xsl:strip-space elements="*"/>
+  <xsl:preserve-space elements="p div span b i u s sub sup a"/>
 
   <xsl:template match="node()|@*">
     <xsl:copy>

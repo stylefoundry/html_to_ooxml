@@ -37,6 +37,11 @@ describe "XSLT" do
     compare_resulting_ooxml_with_expected(html, "<a:p> <a:r> <a:rPr dirty=\"0\" b=\"1\"/> <a:t>Hello</a:t> </a:r> </a:p>")
   end
 
+  it "preserves whitespace between inline elements" do
+    html = '<html><head></head><body><p><b>foo</b> <i>bar</i></p></body></html>'
+    compare_resulting_ooxml_with_expected(html, "<a:p> <a:r> <a:rPr dirty=\"0\" b=\"1\"/> <a:t>foo</a:t> </a:r> <a:r> <a:rPr dirty=\"0\" i=\"1\"/> <a:t>bar</a:t> </a:r> </a:p>")
+  end
+
   it "transforms a href into pptx link" do
     html = '<html><head></head><body><p><a href="http://www.somewhere.com">Hello</a></p></body></html>'
     compare_resulting_ooxml_with_expected(html, "<a:p> <a:r> <a:rPr> <a:hlinkClick r:id=\"rId100\"/></a:rPr> <a:t>Hello</a:t> </a:r> </a:p>")
