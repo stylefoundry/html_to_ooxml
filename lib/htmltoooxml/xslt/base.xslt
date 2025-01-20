@@ -75,6 +75,14 @@
   <xsl:template match="div[not(ancestor::li) and not(ancestor::td) and not(ancestor::th) and not(ancestor::p) and not(descendant::div) and not(descendant::p) and not(descendant::h1) and not(descendant::h2) and not(descendant::h3) and not(descendant::h4) and not(descendant::h5) and not(descendant::h6) and not(descendant::table) and not(descendant::li) and not (descendant::pre)]">
     <xsl:comment>Divs should create a p if nothing above them has and nothing below them will</xsl:comment>
     <a:p>
+      <a:pPr>
+        <a:spcBef>
+          <a:spcPts val="200"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="600"/>
+        </a:spcAft>
+      </a:pPr>
       <xsl:call-template name="text-alignment" />
       <xsl:apply-templates />
     </a:p>
@@ -88,6 +96,14 @@
   <xsl:template match="body/h1|body/h2|body/h3|body/h4|body/h5|body/h6|h1|h2|h3|h4|h5|h6">
     <xsl:variable name="length" select="string-length(name(.))"/>
     <a:p>
+      <a:pPr>
+        <a:spcBef>
+          <a:spcPts val="200"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="600"/>
+        </a:spcAft>
+      </a:pPr>
       <a:r>
         <a:rPr b="1" dirty="0"/>
         <a:t><xsl:value-of select="."/></a:t>
@@ -97,6 +113,14 @@
 
   <xsl:template match="p[not(ancestor::li)]">
     <a:p>
+      <a:pPr>
+        <a:spcBef>
+          <a:spcPts val="200"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="600"/>
+        </a:spcAft>
+      </a:pPr>
       <xsl:call-template name="text-alignment" />
       <xsl:apply-templates />
     </a:p>
