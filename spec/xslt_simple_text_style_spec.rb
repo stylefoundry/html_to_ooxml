@@ -29,7 +29,7 @@ describe "XSLT" do
 
   it "transforms a p with a br into a pptx block element with a break." do
     html = '<html><head></head><body><p>Hello <br> Bob</p></body></html>'
-    compare_resulting_ooxml_with_expected(html, "<a:p> <a:r> <a:t>Hello </a:t> </a:r> </a:p><a:p><a:endParaRPr lang=\"en-US\" dirty=\"0\"/></a:p><a:p><a:r><a:t> Bob</a:t></a:r> </a:p>")
+    compare_resulting_ooxml_with_expected(html, "<a:p><a:r><a:t>Hello </a:t></a:r><a:p><a:endParaRPr/></a:p><a:r><a:t> Bob</a:t></a:r></a:p>")
   end
 
   it "transforms a b into pptx b" do
