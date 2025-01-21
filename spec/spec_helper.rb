@@ -14,7 +14,6 @@ def compare_resulting_ooxml_with_expected(html, resulting_ooxml, extras: false)
   result = Htmltoooxml::Document.new().transform_doc_xml(source, extras)
   result.gsub!(/\s*<!--(.*?)-->\s*/m, '')
   result = remove_declaration(result)
-  puts result
   expect(remove_whitespace(result)).to eq(remove_whitespace(resulting_ooxml))
 end
 
@@ -32,4 +31,3 @@ end
 def remove_declaration(ooxml)
   ooxml.sub(/<\?xml (.*?)>/, '').gsub(/\s*xmlns:(\w+)="(.*?)\s*"/, '')
 end
-

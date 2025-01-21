@@ -263,23 +263,19 @@
   <xsl:template match="text()">
     <xsl:if test="string-length(.) > 0">
       <a:r>
-        <xsl:if test="ancestor::i">
-         <a:rPr  dirty="0" i="1"/>
-        </xsl:if>
-        <xsl:if test="ancestor::b">
-          <a:rPr dirty="0" b="1"/>
-        </xsl:if>
-        <xsl:if test="ancestor::u">
-          <a:rPr dirty="0"/>
-        </xsl:if>
-        <xsl:if test="ancestor::s">
-          <a:rPr dirty="0"/>
-        </xsl:if>
-        <xsl:if test="ancestor::sub">
-          <a:rPr dirty="0"/>
-        </xsl:if>
-        <xsl:if test="ancestor::sup">
-          <a:rPr dirty="0"/>
+        <xsl:if test="ancestor::i | ancestor::b | ancestor::u | ancestor::s | ancestor::sub | ancestor::sup">
+          <xsl:element name="a:rPr">
+            <xsl:attribute name="dirty">0</xsl:attribute>
+            <xsl:if test="ancestor::i">
+              <xsl:attribute name="i">1</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="ancestor::b">
+              <xsl:attribute name="b">1</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="ancestor::u">
+              <xsl:attribute name="u">sng</xsl:attribute>
+            </xsl:if>
+          </xsl:element>
         </xsl:if>
         <a:t><xsl:value-of select="."/></a:t>
       </a:r>
