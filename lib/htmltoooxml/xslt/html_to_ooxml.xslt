@@ -30,6 +30,9 @@
   <xsl:template match="p">
     <a:p>
       <a:pPr marL="0" indent="0">
+        <a:spcBef>
+          <a:spcPts val="200"/>
+        </a:spcBef>
         <a:spcAft>
           <a:spcPts val="600"/>
         </a:spcAft>
